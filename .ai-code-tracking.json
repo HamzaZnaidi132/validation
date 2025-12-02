@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "records": [
+    {
+      "filePath": "/ValidationPipelineApplication.java",
+      "timestamp": 1764709860922,
+      "startOffset": 234,
+      "endOffset": 254,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    }
+  ],
+  "toolStats": {
+    "AI Assistant": {
+      "usageCount": 1,
+      "totalLines": 1
+    }
+  }
+}
