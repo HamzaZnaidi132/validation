@@ -8,7 +8,6 @@ public class ValidationPipelineApplication {
 
 
     public static void main(String[] args) {
-
         SpringApplication.run(ValidationPipelineApplication.class, args);
     }
 

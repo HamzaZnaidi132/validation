@@ -11,12 +11,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "/ValidationPipelineApplication.java",
+      "timestamp": 1764715882289,
+      "startOffset": 275,
+      "endOffset": 296,
+      "codeContent": "iIntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 1,
-      "totalLines": 1
+      "usageCount": 2,
+      "totalLines": 2
     }
   }
 }
