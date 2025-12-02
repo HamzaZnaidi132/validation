@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "monuser/monapp"
+        DOCKER_IMAGE = "hamzaznaidi/projet"
         DOCKER_TAG = "latest"
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/TON_USER/TON_REPO.git'
+                git branch: 'main', url: 'https://github.com/HamzaZnaidi132/validation.git'
             }
         }
         stage('Clean') {
