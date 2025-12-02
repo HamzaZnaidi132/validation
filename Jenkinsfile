@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Récupération du code depuis GitHub..."
-                git branch: 'main', url: 'https://github.com/HamzaZnaidi132/validation.git'
+                git branch: 'main', url: "https://github.com/HamzaZnaidi132/validation.git", credentialsId: "github-token"
             }
         }
 
