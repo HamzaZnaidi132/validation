@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "*hamzaznaidi/projet_devops"
-        IMAGE_TAG = "latest"
+        IMAGE_NAME = "hamzaznaidi/projet_devops"
+        IMAGE_TAG  = "latest"
     }
 
     triggers {
@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Récupération du code depuis GitHub..."
-                git branch: 'main', url: "https://github.com/HamzaZnaidi132/validation.git", credentialsId: "github-token"
+                git branch: 'main', url: 'https://github.com/HamzaZnaidi132/validation.git'
             }
         }
 
@@ -35,16 +35,19 @@ pipeline {
 
         stage('Docker Login & Push') {
             steps {
-                echo 'Connexion + push vers DockerHub...'
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                echo "Connexion + push vers DockerHub..."
+                withCredentials([usernamePassword(credentialsId: '8248def7-9835-4807-8c09-ee56c34c0e21',
+                        usernameVariable: 'DOCKER_USER',
+                        passwordVariable: 'DOCKER_PASS')]) {
                     sh """
-                        echo $PASS | docker login -u $USER --password-stdin
+                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                         docker push ${IMAGE_NAME}:${IMAGE_TAG}
                     """
                 }
             }
         }
     }
+
 
     post {
         always {
