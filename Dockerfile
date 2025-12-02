@@ -25,4 +25,4 @@ EXPOSE 8080
 
 
 # Commande pour exécuter l'application
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/app.jar"]gi
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/app.jar"]
